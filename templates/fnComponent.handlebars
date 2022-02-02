@@ -3,13 +3,15 @@ import { _{{ name }} } from './styles';
 
 
 export type I{{ name }} = {
-
+    name?: string;
 };
 
 export const {{ name }} = (props: I{{ name }}) => {
-  const { } = props;
+  const { name } = props;
 
   return (
-    <_{{ name }}>{{ name }}</_{{ name }}>
+      <_{{ name }}>
+          {name}
+      </_{{ name }}>
   );
 };
