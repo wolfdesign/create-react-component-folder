@@ -4,13 +4,14 @@ import { {{ name }} }                    from './';
 
 
 export default {
+    title: 'Common/Components/{{name}}',
     component: {{ name }},
 } as ComponentMeta<typeof {{ name }}>;
 
 
 const Template: ComponentStory<typeof {{ name }}> = (args) => <{{ name }} {...args} />;
 
-export const FirstStory = Template.bind({});
-FirstStory.args = {
+export const Default = Template.bind({});
+Default.args = {
     //
 };
