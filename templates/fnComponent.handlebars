@@ -1,31 +1,15 @@
 import React from 'react';
-{{#if proptypes}}
-  import PropTypes from 'prop-types';
-{{/if}}
-{{#if typescript}}
-
 {{#if styled}}import { _{{ name }} } from './styles';{{/if}}
+
+
 {{#if export}}export {{/if}}type I{{ name }} = {
   //
 };
-{{/if}}
 
-{{#if export }}export {{/if}}const {{ name }}{{#if typescript}} = (props: I{{ name }}) => {
+{{#if export }}export {{/if}}const {{ name }} = (props: I{{ name }}) => {
   const { // } = props;
-  
+
   return (
     <_{{ name }}>{{ name }}</_{{ name }}>
   );
 };
-
-{{#if proptypes~}}
-{{ name }}.propTypes = {
-  //
-};
-{{#unless export}}
-
-{{/unless}}
-{{/if}}
-{{#unless export }}
-export default {{ name }};
-{{/unless}}
