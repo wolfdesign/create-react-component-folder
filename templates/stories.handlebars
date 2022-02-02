@@ -1,14 +1,16 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import {{#if export~}} { {{ name }} } {{else~}} {{name}} {{~/if}} from './
-{{~#if uppercase~}}
-  {{~name}}
-  {{~else~}}
-  {{~nameLowerCase}}
-{{~/if}}';
+import React                             from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { {{ name }} }                    from './';
 
-storiesOf('<{{ name }} />', module).add('{{ name }}', () => (
-  <div>
-    <{{ name }} />
-  </div>
-));
+
+export default {
+    component: {{ name }},
+} as ComponentMeta<typeof {{ name }}>;
+
+
+const Template: ComponentStory<typeof {{ name }}> = (args) => <\{{ name }} {...args} />;
+
+export const FirstStory = Template.bind({});
+FirstStory.args = {
+    //
+};
