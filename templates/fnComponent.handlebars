@@ -1,13 +1,13 @@
 import React from 'react';
-{{#if styled}}import { _{{ name }} } from './styles';{{/if}}
+import { _{{ name }} } from './styles';
 
 
-{{#if export}}export {{/if}}type I{{ name }} = {
-  //
+export type I{{ name }} = {
+
 };
 
-{{#if export }}export {{/if}}const {{ name }} = (props: I{{ name }}) => {
-  const { // } = props;
+export const {{ name }} = (props: I{{ name }}) => {
+  const { } = props;
 
   return (
     <_{{ name }}>{{ name }}</_{{ name }}>
